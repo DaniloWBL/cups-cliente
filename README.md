@@ -38,5 +38,52 @@ Edite o arquivo de configuração
 vi cupsd.conf
 </pre>
 
+Comente a aseguinte linha
+<pre>
+#Listen localhost:631
+</pre>
+
+Abaixo de listen add a seguine linha de código
+<pre>
+port 631
+</pre>
+
+Altere o Location para esta forma add o comando abaixo dos que já existem
+<pre>
+location
+Allow @local
+/location
+
+location /admin
+Allow @local
+/location
+
+location /admin/conf
+Allow @local
+/location
+</pre>
+
+sai do arquivo
+<pre>
+:q para salvar :q!
+</pre>
+
+Reinicie  servidor
+<pre>
+/etc/init.d/cups restart
+</pre>
+
+Descubra o IP da máquina
+<pre>
+ifconfig 
+</pre>
+
+Acesso o sevidor no Navegador
+<pre>
+192.168.1.142:631 ou localhost:361
+</pre>
+
+
+
 
 
