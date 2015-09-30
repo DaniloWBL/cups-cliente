@@ -40,7 +40,7 @@ vi cupsd.conf
 
 Comente a aseguinte linha
 <pre>
-#Listen localhost:631
+#Listen localhost:631 //comentando essa linha deixamos de escutar essa porta
 </pre>
 
 Abaixo de listen add a seguine linha de código
